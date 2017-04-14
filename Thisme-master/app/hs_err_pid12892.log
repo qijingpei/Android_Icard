@@ -1,0 +1,150 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=12892, tid=10456
+#
+# JRE version:  (8.0_73-b02) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.73-b02 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000023d0800):  JavaThread "Unknown thread" [_thread_in_vm, id=10456, stack(0x00000000022d0000,0x00000000023d0000)]
+
+Stack: [0x00000000022d0000,0x00000000023d0000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00000000023d0800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=10456, stack(0x00000000022d0000,0x00000000023d0000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 37888K, used 655K [0x00000000eab00000, 0x00000000ed500000, 0x0000000100000000)
+  eden space 32768K, 2% used [0x00000000eab00000,0x00000000eaba3d80,0x00000000ecb00000)
+  from space 5120K, 0% used [0x00000000ed000000,0x00000000ed000000,0x00000000ed500000)
+  to   space 5120K, 0% used [0x00000000ecb00000,0x00000000ecb00000,0x00000000ed000000)
+ ParOldGen       total 86016K, used 0K [0x00000000c0000000, 0x00000000c5400000, 0x00000000eab00000)
+  object space 86016K, 0% used [0x00000000c0000000,0x00000000c0000000,0x00000000c5400000)
+ Metaspace       used 769K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 75K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000011890000,0x0000000011aa0000] byte_map_base: 0x0000000011290000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000067ed0600
+ Begin Bits: [0x0000000012000000, 0x0000000013000000)
+ End Bits:   [0x0000000013000000, 0x0000000014000000)
+
+Polling page: 0x0000000002200000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x00000000024d0000, 0x0000000002740000, 0x00000000114d0000]
+ total_blobs=57 nmethods=0 adapters=37
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.056 loading class java/lang/Short
+Event: 0.056 loading class java/lang/Short done
+Event: 0.056 loading class java/lang/Integer
+Event: 0.056 loading class java/lang/Integer done
+Event: 0.056 loading class java/lang/Long
+Event: 0.057 loading class java/lang/Long done
+Event: 0.058 loading class java/lang/NullPointerException
+Event: 0.058 loading class java/lang/NullPointerException done
+Event: 0.058 loading class java/lang/ArithmeticException
+Event: 0.058 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x000007f629bc0000 - 0x000007f629bf7000 	D:\software\jdk8\bin\java.exe
+0x000007fdedbd0000 - 0x000007fdedd8d000 	C:\windows\SYSTEM32\ntdll.dll
+0x000007fdeb540000 - 0x000007fdeb676000 	C:\windows\system32\KERNEL32.DLL
+0x000007fdea8a0000 - 0x000007fdea994000 	C:\windows\system32\KERNELBASE.dll
+0x000007fdeba30000 - 0x000007fdebb0e000 	C:\windows\system32\ADVAPI32.dll
+0x000007fdebc70000 - 0x000007fdebdbc000 	C:\windows\system32\USER32.dll
+0x000007fde7c30000 - 0x000007fde7e9a000 	C:\windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9200.17359_none_4188b989718cf1c6\COMCTL32.dll
+0x000007fdebdc0000 - 0x000007fdebe65000 	C:\windows\system32\msvcrt.dll
+0x000007fdeb060000 - 0x000007fdeb0a8000 	C:\windows\SYSTEM32\sechost.dll
+0x000007fdeb260000 - 0x000007fdeb3a5000 	C:\windows\system32\RPCRT4.dll
+0x000007fded950000 - 0x000007fdeda91000 	C:\windows\system32\GDI32.dll
+0x000007fdead90000 - 0x000007fdeadc9000 	C:\windows\system32\IMM32.DLL
+0x000007fdeb3c0000 - 0x000007fdeb4d5000 	C:\windows\system32\MSCTF.dll
+0x0000000066d00000 - 0x0000000066dd2000 	D:\software\jdk8\jre\bin\msvcr100.dll
+0x00000000676c0000 - 0x0000000067f50000 	D:\software\jdk8\jre\bin\server\jvm.dll
+0x000007fde2020000 - 0x000007fde2029000 	C:\windows\SYSTEM32\WSOCK32.dll
+0x000007fdeaba0000 - 0x000007fdeabc0000 	C:\windows\system32\WINMM.dll
+0x000007fde6e20000 - 0x000007fde6e29000 	C:\windows\SYSTEM32\VERSION.dll
+0x000007fdedbc0000 - 0x000007fdedbc7000 	C:\windows\system32\PSAPI.DLL
+0x000007fdeb680000 - 0x000007fdeb6d8000 	C:\windows\system32\WS2_32.dll
+0x000007fdea730000 - 0x000007fdea762000 	C:\windows\system32\WINMMBASE.dll
+0x000007fdeb3b0000 - 0x000007fdeb3b9000 	C:\windows\system32\NSI.dll
+0x00000000676b0000 - 0x00000000676bf000 	D:\software\jdk8\jre\bin\verify.dll
+0x0000000067680000 - 0x00000000676a9000 	D:\software\jdk8\jre\bin\java.dll
+0x0000000067660000 - 0x0000000067676000 	D:\software\jdk8\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Djava.awt.headless=true -Xmx1024M -Dfile.encoding=GBK -Duser.country=CN -Duser.language=zh -Duser.variant 
+java_command: com.android.dx.command.Main --dex --output C:\Users\lenovo\Desktop\Thisme-master\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1_532c84a5a1ad70e236bbc27cbd59472a3a49e76f.jar D:\software\androidSDK\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar
+java_class_path (initial): D:\software\androidSDK\sdk\build-tools\22.0.1\lib\dx.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files (x86)\Java\jdk1.6.0_10
+CLASSPATH=.;C:\Program Files (x86)\Java\jdk1.6.0_10\lib\tools.jar;C:\Program Files (x86)\Java\jdk1.6.0_10\lib\dt.jar;.C:\Program Files (x86)\Java\jdk1.6.0_10\lib;
+PATH=C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Java\jdk1.6.0_10\bin;D:\software\android SDK\sdk\platform-tools;;C:\windows\system32;C:\windows;C:\windows\system32\wbem
+USERNAME=lenovo
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 8 , 64 bit Build 9200 (6.2.9200.16627)
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, clmul, erms, ht, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 8229088k(1018644k free), swap 10747904k(5568k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.73-b02) for windows-amd64 JRE (1.8.0_73-b02), built on Jan 29 2016 17:38:49 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Mon Feb 22 22:11:03 2016
+elapsed time: 0 seconds (0d 0h 0m 0s)
+

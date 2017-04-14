@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity" >
+
+    <item
+        android:id="@+id/ab_search"
+        android:orderInCategory="60"
+        android:title="action_search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="ifRoom"/>
+
+
+    <group>
+        <item
+            android:id="@+id/ab_add_me"
+            android:orderInCategory="70"
+            android:title="创建名片"
+            android:icon="@drawable/ic_add_black_18dp"
+            app:showAsAction="ifRoom"
+            />
+        <!--<item-->
+            <!--android:id="@+id/ab_add_friend"-->
+            <!--android:orderInCategory="70"-->
+            <!--android:title="扫一扫"-->
+            <!--android:icon="@drawable/ic_dashboard_black_18dp"-->
+            <!--app:showAsAction="ifRoom"-->
+            <!--/>-->
+    </group>
+</menu>

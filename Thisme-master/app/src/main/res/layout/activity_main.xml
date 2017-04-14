@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity"
+    android:id="@+id/main_layout">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/activity_main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary">
+
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dip"
+        android:background="@android:color/darker_gray" />
+    <RadioGroup
+        android:id="@+id/tab_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/card_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:button="@null"
+
+            android:drawableTop="@drawable/tab_selector_card"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="名片"
+            android:textColor="@drawable/tab_selector_tv_color" />
+        <RadioButton
+            android:id="@+id/friend_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_selector_friend"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="联系人"
+            android:textColor="@drawable/tab_selector_tv_color"
+            android:checked="true"/>
+        <RadioButton
+            android:id="@+id/more_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_selecotr_more"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="更多"
+            android:textColor="@drawable/tab_selector_tv_color" />
+    </RadioGroup>
+</LinearLayout>

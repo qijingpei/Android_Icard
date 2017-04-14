@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="扫一扫添加朋友名片"
+        android:id="@+id/addfriend_ss" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="51dp"
+        android:text="手动添加朋友名片"
+        android:id="@+id/addfriend_sd" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  创建自己的名片"
+        android:id="@+id/addme" />
+    </RadioGroup>
+
+
+</LinearLayout>
